@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><title>Test Document</title><script type="text/html">
+            <div>
+                <a href="page.html">
+                    <img src="img.png" />
+                </a>
+            </div>
+        </script><!-- From: http://documentcloud.github.com/backbone/examples/todos/index.html --><script type="text/template" id="item-template">
+            <div class="view">
+                <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+                <label><%= title %></label>
+                <a class="destroy"></a>
+            </div>
+            <input class="edit" type="text" value="<%= title %>" />
+        </script><script type="text/template" id="stats-template">
+            <% if (done) { %>
+                <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+            <% } %>
+            <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+        </script><!-- End from --></head><body><h1>Test</h1></body></html>
