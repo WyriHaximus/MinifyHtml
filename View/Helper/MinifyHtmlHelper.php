@@ -1,11 +1,10 @@
 <?php
 
 /**
- * MinifyHtmlTest file
+ * MinifyHtml file
  *
  * PHP 5
  *
- * CakePHP(tm) Tests <http://book.cakephp.org/2.0/en/development/testing.html>
  * Copyright 2012, Cees-Jan Kiewiet.
  *
  * Licensed under The MIT License
