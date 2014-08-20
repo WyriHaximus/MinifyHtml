@@ -10,6 +10,7 @@
  */
 namespace WyriHaximus\CakePHP\MinifyHtml\View\Helper;
 
+use Cake\Core\Configure;
 use Cake\View\Helper;
 use WyriHaximus\HtmlCompress\Factory;
 
