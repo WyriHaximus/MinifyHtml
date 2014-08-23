@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace WyriHaximus\CakePHP\MinifyHtml\View\Helper;
+namespace WyriHaximus\MinifyHtml\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;
@@ -16,7 +16,7 @@ use WyriHaximus\HtmlCompress\Factory;
 
 /**
  * Class MinifyHtmlHelper
- * @package WyriHaximus\CakePHP\MinifyHtml\View\Helper
+ * @package WyriHaximus\MinifyHtml\View\Helper
  */
 class MinifyHtmlHelper extends Helper {
 

@@ -15,7 +15,7 @@ $TMP->create(TMP . 'cache/persistent', 0777);
 $TMP->create(TMP . 'cache/views', 0777);
 
 Cake\Core\Plugin::load('MinifyHtml', [
-    'namespace' => 'WyriHaximus\CakePHP\MinifyHtml',
+    'namespace' => 'WyriHaximus\MinifyHtml',
     'path' => PLUGIN_REPO_ROOT . 'src' . DS,
 ]);
 Cake\Core\Configure::write('App', [

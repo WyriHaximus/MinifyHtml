@@ -13,11 +13,11 @@ namespace WyriHaximus\CakePHP\Test\MinifyHtml\View\Helper;
 use Cake\Core\Configure;
 use Cake\TestSuite\TestCase;
 use Phake;
-use WyriHaximus\CakePHP\MinifyHtml\View\Helper\MinifyHtmlHelper;
+use WyriHaximus\MinifyHtml\View\Helper\MinifyHtmlHelper;
 
 /**
  * Class MinifyHtmlHelper
- * @package WyriHaximus\CakePHP\MinifyHtml\View\Helper
+ * @package WyriHaximus\MinifyHtml\View\Helper
  */
 class MinifyHtmlHelpertest extends TestCase {
 
