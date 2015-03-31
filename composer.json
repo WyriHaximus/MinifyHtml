@@ -19,11 +19,10 @@
     ],
     "require": {
         "php": ">=5.4.19",
-        "composer/installers": "*",
+        "cakephp/cakephp": "~3.0",
         "wyrihaximus/html-compress": "dev-master"
     },
     "require-dev": {
-        "cakephp/cakephp": "3.0.*-dev",
         "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit": "~4.0",
         "phake/phake": "1.0.*"
