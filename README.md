@@ -11,7 +11,7 @@ To install via [Composer](http://getcomposer.org/), use the command below, it wi
 composer require wyrihaximus/minify-html 
 ```
 
-## License ##
+### License ###
 
 Copyright 2015 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
