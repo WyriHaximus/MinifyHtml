@@ -23,6 +23,7 @@ class MinifyHtmlHelpertest extends TestCase {
 
     public function testAfterLayout() {
         Configure::write('debug', false);
+        Configure::write('WyriHaximus.MinifyHtml.factory', 'WyriHaximus\HtmlCompress\Factory::construct');
 
         $view = Phake::mock('Cake\View\View');
         $view->Blocks = Phake::mock('Cake\View\ViewBlock');

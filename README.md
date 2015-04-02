@@ -16,7 +16,7 @@ composer require wyrihaximus/minify-html
 Add the following to your `config/bootstrap.php` to load the plugin.
 
 ```php
-Plugin::load('WyriHaximus/MinifyHtml');
+Plugin::load('WyriHaximus/MinifyHtml', ['bootstrap' => true]);
 ```
 
 ### Usage ###
