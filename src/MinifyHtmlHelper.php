@@ -18,18 +18,19 @@ use WyriHaximus\HtmlCompress\Factory;
  * Class MinifyHtmlHelper
  * @package WyriHaximus\MinifyHtml\View\Helper
  */
-class MinifyHtmlHelper extends Helper {
-
+class MinifyHtmlHelper extends Helper
+{
     /**
      * @var array
      */
-    protected $_mimeTypes = [
+    protected $mimeTypes = [
         'text/html',
         'text/xhtml',
     ];
 
-    public function afterLayout() {
-        if ((!Configure::read('debug')) && in_array($this->_View->response->type(), $this->_mimeTypes)) {
+    public function afterLayout()
+    {
+        if ((!Configure::read('debug')) && in_array($this->_View->response->type(), $this->mimeTypes)) {
             $content = $this->_View->Blocks->get('content');
             $content = Factory::constructFastest()->compress($content);
             $this->_View->Blocks->set('content', $content);
