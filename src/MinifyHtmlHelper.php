@@ -12,7 +12,6 @@ namespace WyriHaximus\MinifyHtml\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;
-use WyriHaximus\HtmlCompress\Factory;
 
 /**
  * Class MinifyHtmlHelper
