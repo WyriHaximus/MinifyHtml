@@ -30,7 +30,7 @@ class MinifyHtmlHelper extends Helper
 
     public function afterLayout()
     {
-        if (!Configure::read('debug') && in_array($this->_View->response->type(), $this->mimeTypes)) {
+        if ((!Configure::read('debug') || Configure::read('WyriHaximus.MinifyHtml.debugOverride')) && in_array($this->_View->response->type(), $this->mimeTypes)) {
             $content = $this->_View->Blocks->get('content');
             $content = Factory::constructFastest()->compress($content);
             $this->_View->Blocks->set('content', $content);
