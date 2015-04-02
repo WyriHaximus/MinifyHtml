@@ -31,7 +31,7 @@ class MinifyHtmlHelper extends Helper {
     public function afterLayout() {
         if ((!Configure::read('debug')) && in_array($this->_View->response->type(), $this->_mimeTypes)) {
             $content = $this->_View->Blocks->get('content');
-            $content = Factory::construct()->compress($content);
+            $content = Factory::constructFastest()->compress($content);
             $this->_View->Blocks->set('content', $content);
         }
     }
