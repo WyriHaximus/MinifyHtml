@@ -34,6 +34,13 @@ class AppController extends Controller
 }
 ```
 
+### Configuration ###
+
+All configuration is namespaced, just as this plugin into `WyriHaximus.MinifyHtml`. The following options are available:
+
+`debugOverride` (bool) Defaults to `false`. Everwrite debug and minify when debug it on. 
+`factory` (string) Defaults to `WyriHaximus\HtmlCompress\Factory::constructFastest`. Speficy a parser factory, `constructFastest`, `construct`, and `constructSmallest` are build in.
+
 ### License ###
 
 Copyright 2015 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
