@@ -16,13 +16,14 @@ use Phake;
 use WyriHaximus\MinifyHtml\View\Helper\MinifyHtmlHelper;
 
 /**
- * Class MinifyHtmlHelper
- * @package WyriHaximus\MinifyHtml\View\Helper
+ * Class MinifyHtmlHelpertest
+ * @package WyriHaximus\CakePHP\Test\MinifyHtml\View\Helper
  */
 class MinifyHtmlHelpertest extends TestCase {
 
     public function testAfterLayout() {
-        Configure::write('debug', false);
+        Configure::write('debug', true);
+        Configure::write('WyriHaximus.MinifyHtml.debugOverride', true);
         Configure::write('WyriHaximus.MinifyHtml.factory', 'WyriHaximus\HtmlCompress\Factory::construct');
 
         $view = Phake::mock('Cake\View\View');

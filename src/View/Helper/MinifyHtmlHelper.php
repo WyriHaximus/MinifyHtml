@@ -29,10 +29,15 @@ class MinifyHtmlHelper extends Helper
 
     public function afterLayout()
     {
-        if ((!Configure::read('debug') || Configure::read('WyriHaximus.MinifyHtml.debugOverride')) && in_array($this->_View->response->type(), $this->mimeTypes)) {
+        if (
+            (
+                !Configure::read('debug') ||
+                Configure::read('WyriHaximus.MinifyHtml.debugOverride')
+            ) &&
+            in_array($this->_View->response->type(), $this->mimeTypes)
+        ) {
             $content = $this->_View->Blocks->get('content');
-            $factory = call_user_func(Configure::read('WyriHaximus.MinifyHtml.factory'));
-            $content = $factory->compress($content);
+            $content = \WyriHaximus\MinifyHtml\compress($content);
             $this->_View->Blocks->set('content', $content);
         }
     }
