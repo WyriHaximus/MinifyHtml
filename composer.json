@@ -1,6 +1,6 @@
 {
     "name": "wyrihaximus/minify-html",
-    "description": "Html minificater for CakePHP3",
+    "description": "Html minifier for CakePHP3",
     "type":"cakephp-plugin",
     "license": "MIT",
     "keywords": [
