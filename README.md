@@ -38,7 +38,10 @@ class AppController extends Controller
 
 ##### [dereuromark/cakephp-cache](https://github.com/dereuromark/cakephp-cache) #####
 
-To use MinifyHtml instead of `dereuromark/cakephp-cache`'s own HTML minifier. Set the [`compress` configuration option](https://github.com/dereuromark/cakephp-cache#component-configuration) to: `\WyriHaximus\MinifyHtml\compress`
+To use MinifyHtml instead of `dereuromark/cakephp-cache`'s own HTML minifier. Set the [`compress` configuration option](https://github.com/dereuromark/cakephp-cache#component-configuration) to:
+```php
+'\WyriHaximus\MinifyHtml\compress'
+```
 
 ### Configuration ###
 
