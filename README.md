@@ -21,16 +21,16 @@ Plugin::load('WyriHaximus/MinifyHtml', ['bootstrap' => true]);
 
 ### Usage ###
 
-After loading this plugin in your `bootstrap.php` the helper can be enabled in any controller by adding `WyriHaximus/MinifyHtml.MinifyHtml` to the helpers array like the example below:
+After loading this plugin in your `bootstrap.php` the helper can be enabled in the `AppView` by loading the `WyriHaximus/MinifyHtml.MinifyHtml` helper like the example below:
 
 ```php
-<?php
 
-class AppController extends Controller
+class AppView extends View
 {
-    public $helpers = [
-        'WyriHaximus/MinifyHtml.MinifyHtml',
-    ];
+    public function initialize()
+    {
+        $this->loadHelper('WyriHaximus/MinifyHtml.MinifyHtml');
+    }
 }
 ```
 
