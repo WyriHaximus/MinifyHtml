@@ -1,5 +1,11 @@
 language: php
 
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
+## PHP versions we test against
 php:
   - 5.4
   - 5.5
@@ -7,6 +13,7 @@ php:
   - 7
   - hhvm
 
+## Build matrix for lowest and highest possible targets
 matrix:
   include:
     - php: 5.4
@@ -26,10 +33,14 @@ matrix:
     - php: hhvm
       env: dependencies=highest
 
+## Update composer and run the appropriate composer command
 before_script:
-  - composer self-update
-  - composer install
+  - composer self-update -q
+  - if [ -z "$dependencies" ]; then composer install; fi;
+  - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest -n; fi;
+  - if [ "$dependencies" = "highest" ]; then composer update -n; fi;
 
+## Run the actual test
 script: make travis
 
 notifications:
