@@ -34,6 +34,10 @@ class AppView extends View
 }
 ```
 
+#### Note on debug ####
+
+When debug mode is on nothing will be minified.
+
 ### Usage in other plugins ###
 
 ##### [dereuromark/cakephp-cache](https://github.com/dereuromark/cakephp-cache) #####
