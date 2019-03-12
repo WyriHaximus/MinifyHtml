@@ -11,8 +11,9 @@
 namespace WyriHaximus\CakePHP\Test\MinifyHtml\View\Helper;
 
 use Cake\Core\Configure;
+use Cake\Http\Response;
 use Cake\TestSuite\TestCase;
-use Phake;
+use Cake\View\View;
 use WyriHaximus\MinifyHtml\View\Helper\MinifyHtmlHelper;
 
 /**
@@ -26,19 +27,16 @@ class MinifyHtmlHelpertest extends TestCase {
         Configure::write('WyriHaximus.MinifyHtml.debugOverride', true);
         Configure::write('WyriHaximus.MinifyHtml.factory', 'WyriHaximus\HtmlCompress\Factory::construct');
 
-        $view = Phake::mock('Cake\View\View');
-        $view->Blocks = Phake::mock('Cake\View\ViewBlock');
-        $view->request = Phake::mock('Cake\Network\Request');
-        $view->response = Phake::mock('Cake\Network\Response');
-        $helper = new MinifyHtmlHelper($view);
+        $response = $this->prophesize(Response::class);
+        $response->getType()->shouldBeCalled()->willReturn('text/html');
 
-        Phake::when($view->response)->type()->thenReturn('text/html');
+        $view = $this->prophesize(View::class);
+        $view->fetch('content')->shouldBeCalled()->willReturn('foo.bar');
+        $view->assign('content', 'foo.bar')->shouldBeCalled();
+        $view->getResponse()->shouldBeCalled()->willReturn($response->reveal());
+
+        $helper = new MinifyHtmlHelper($view->reveal());
 
         $helper->afterLayout('foo.bar');
-
-        Phake::inOrder(
-            Phake::verify($view->Blocks)->get('content'),
-            Phake::verify($view->Blocks)->set('content', $this->isType('string'))
-        );
     }
 }

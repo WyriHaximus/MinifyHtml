@@ -34,11 +34,11 @@ class MinifyHtmlHelper extends Helper
                 !Configure::read('debug') ||
                 Configure::read('WyriHaximus.MinifyHtml.debugOverride')
             ) &&
-            in_array($this->_View->response->type(), $this->mimeTypes)
+            in_array($this->_View->getResponse()->getType(), $this->mimeTypes)
         ) {
-            $content = $this->_View->Blocks->get('content');
+            $content = $this->_View->fetch('content');
             $content = \WyriHaximus\MinifyHtml\compress($content);
-            $this->_View->Blocks->set('content', $content);
+            $this->_View->assign('content', $content);
         }
     }
 }
