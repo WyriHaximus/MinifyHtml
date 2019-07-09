@@ -22,7 +22,7 @@
         "php": ">=5.5.9",
         "cakephp/cakephp": "^3.7 || 4.x-dev as 4.0.0",
         "cakephp/chronos": "^1.2 || 2.x-dev as 2.0.0",
-        "wyrihaximus/html-compress": "^1.0"
+        "wyrihaximus/html-compress": "^1.0 || ^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^6.0|^8.0",
@@ -39,5 +39,9 @@
         "psr-4": {
             "WyriHaximus\\CakePHP\\Tests\\MinifyHtml\\View\\Helper\\": "tests/"
         }
+    },
+    "sort-packages": true,
+    "platform": {
+        "php": "5.6"
     }
 }
