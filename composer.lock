@@ -782,18 +782,18 @@
             "authors": [
                 {
                     "name": "websharks",
-                    "homepage": "http://websharks-inc.com/",
-                    "role": "company"
+                    "role": "company",
+                    "homepage": "http://websharks-inc.com/"
                 },
                 {
                     "name": "jaswsinc",
-                    "homepage": "http://jaswsinc.com/",
-                    "role": "developer"
+                    "role": "developer",
+                    "homepage": "http://jaswsinc.com/"
                 },
                 {
                     "name": "raamdev",
-                    "homepage": "http://raam.org/",
-                    "role": "developer"
+                    "role": "developer",
+                    "homepage": "http://raam.org/"
                 }
             ],
             "description": "Compresses CSS.",
@@ -2362,13 +2362,13 @@
             "authors": [
                 {
                     "name": "Daniel Bruce",
-                    "email": "dbruce@vectorface.com",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "dbruce@vectorface.com"
                 },
                 {
                     "name": "Cory Darby",
-                    "email": "ckdarby@vectorface.com",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "ckdarby@vectorface.com"
                 }
             ],
             "description": "Test code against multiple versions of PHP with the help of docker",
@@ -2383,16 +2383,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
+                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
-                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/88e6d84706d09a236046d686bbea96f07b3a34f4",
+                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4",
                 "shasum": ""
             },
             "require": {
@@ -2400,8 +2400,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
+                "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
             "extra": {
@@ -2430,12 +2429,13 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-12-25T11:19:39+00:00"
+            "time": "2019-08-24T08:43:50+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "cakephp/cakephp": 20,
         "cakephp/chronos": 20
     },
     "prefer-stable": false,
