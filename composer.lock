@@ -54,16 +54,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.8.5",
+            "version": "3.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "ea64434740f0d2a53438f95a3de414de63a11101"
+                "reference": "34833a0c02fc1fc21e27ceb69cf7b4f7c131a3cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/ea64434740f0d2a53438f95a3de414de63a11101",
-                "reference": "ea64434740f0d2a53438f95a3de414de63a11101",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/34833a0c02fc1fc21e27ceb69cf7b4f7c131a3cc",
+                "reference": "34833a0c02fc1fc21e27ceb69cf7b4f7c131a3cc",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 "rapid-development",
                 "validation"
             ],
-            "time": "2019-10-07T00:51:50+00:00"
+            "time": "2019-11-07T01:11:43+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -2435,7 +2435,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cakephp/cakephp": 20,
         "cakephp/chronos": 20
     },
     "prefer-stable": false,
