@@ -2271,7 +2271,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.33",
+            "version": "v3.4.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -2435,6 +2435,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "cakephp/cakephp": 20,
         "cakephp/chronos": 20
     },
     "prefer-stable": false,
