@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04fc3b35f19603dc29c63bed90ba1c2d",
+    "content-hash": "1cf6e7b44ea27e44b08f4296e0a82441",
     "packages": [
         {
             "name": "aura/intl",
@@ -439,7 +439,7 @@
             "time": "2013-03-25T21:54:33+00:00"
         },
         {
-            "name": "natxet/cssmin",
+            "name": "natxet/CssMin",
             "version": "v3.0.6",
             "source": {
                 "type": "git",
@@ -2432,7 +2432,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cakephp/chronos": 20
+        "cakephp/cakephp": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
