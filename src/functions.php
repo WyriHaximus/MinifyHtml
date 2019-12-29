@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * This file is part of MinifyHtml.
@@ -16,7 +16,7 @@ use Cake\Core\Configure;
  * @param string $content
  * @return string
  */
-function compress($content)
+function compress(string $content): string
 {
     $factory = call_user_func(Configure::read('WyriHaximus.MinifyHtml.factory'));
     return $factory->compress($content);

@@ -1,13 +1,5 @@
-<?php
+<?php declare(strict_types=1);
 
-/**
- * This file is part of MinifyHtml.
- *
- ** (c) 2014 Cees-Jan Kiewiet
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace WyriHaximus\MinifyHtml\View\Helper;
 
 use Cake\Core\Configure;
@@ -30,8 +22,7 @@ class MinifyHtmlHelper extends Helper
 
     public function afterLayout()
     {
-        if (
-            (
+        if ((
                 !Configure::read('debug') ||
                 Configure::read('WyriHaximus.MinifyHtml.debugOverride')
             ) &&
