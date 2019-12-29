@@ -12,6 +12,7 @@ namespace WyriHaximus\MinifyHtml\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;
+use function WyriHaximus\MinifyHtml\compress;
 
 /**
  * Class MinifyHtmlHelper
@@ -37,7 +38,7 @@ class MinifyHtmlHelper extends Helper
             in_array($this->_View->getResponse()->getType(), $this->mimeTypes)
         ) {
             $content = $this->_View->fetch('content');
-            $content = \WyriHaximus\MinifyHtml\compress($content);
+            $content = compress($content);
             $this->_View->assign('content', $content);
         }
     }
