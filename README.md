@@ -1,7 +1,7 @@
 MinifyHtml
 ==========
 
-CakePHP 3, HTML Minify Plugin
+CakePHP 4, HTML Minify Plugin
 
 ### Installation ###
 
@@ -13,10 +13,22 @@ composer require wyrihaximus/minify-html
 
 ## Bootstrap ##
 
-Add the following to your `config/bootstrap.php` to load the plugin.
+Plugins are loaded in your application’s `bootstrap()` function:
 
 ```php
-Plugin::load('WyriHaximus/MinifyHtml', ['bootstrap' => true]);
+// In src/Application.php
+use Cake\Http\BaseApplication;
+use WyriHaximus\MinifyHtml\Plugin as MinifyHtmlPlugin;
+
+class Application extends BaseApplication {
+    public function bootstrap()
+    {
+        parent::bootstrap();
+
+        // Load the minify html plugin by class name
+        $this->addPlugin(MinifyHtmlPlugin::class);
+    }
+}
 ```
 
 ### Usage ###
@@ -24,10 +36,9 @@ Plugin::load('WyriHaximus/MinifyHtml', ['bootstrap' => true]);
 After loading this plugin in your `bootstrap.php` the helper can be enabled in the `AppView` by loading the `WyriHaximus/MinifyHtml.MinifyHtml` helper like the example below:
 
 ```php
-
 class AppView extends View
 {
-    public function initialize()
+    public function initialize(): void
     {
         $this->loadHelper('WyriHaximus/MinifyHtml.MinifyHtml');
     }
