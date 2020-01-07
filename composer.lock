@@ -1122,16 +1122,16 @@
         },
         {
             "name": "voku/simple_html_dom",
-            "version": "4.7.9",
+            "version": "4.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/simple_html_dom.git",
-                "reference": "a5cbfbd6a19d5a6f9facd5e1e0050f6d60dfd4ec"
+                "reference": "3fa87f4dd982572d7fc2f75bbb3916ebd760d4df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/a5cbfbd6a19d5a6f9facd5e1e0050f6d60dfd4ec",
-                "reference": "a5cbfbd6a19d5a6f9facd5e1e0050f6d60dfd4ec",
+                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/3fa87f4dd982572d7fc2f75bbb3916ebd760d4df",
+                "reference": "3fa87f4dd982572d7fc2f75bbb3916ebd760d4df",
                 "shasum": ""
             },
             "require": {
@@ -1139,7 +1139,7 @@
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
                 "php": ">=7.0.0",
-                "symfony/css-selector": "~3.0 || ~4.0"
+                "symfony/css-selector": "~3.0 || ~4.0 || ~5.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~6.0 || ~7.0"
@@ -1177,7 +1177,7 @@
                 "dom",
                 "php dom"
             ],
-            "time": "2019-12-08T02:25:30+00:00"
+            "time": "2020-01-07T23:15:50+00:00"
         },
         {
             "name": "websharks/css-minifier",
@@ -1489,6 +1489,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2019-11-13T19:16:13+00:00"
         },
         {
@@ -1544,6 +1545,7 @@
                 "psr-7",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-httphandlerrunner",
             "time": "2019-02-19T18:20:34+00:00"
         }
     ],
