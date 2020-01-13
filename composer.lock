@@ -1317,16 +1317,16 @@
         },
         {
             "name": "voku/simple_html_dom",
-            "version": "4.7.10",
+            "version": "4.7.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/simple_html_dom.git",
-                "reference": "3fa87f4dd982572d7fc2f75bbb3916ebd760d4df"
+                "reference": "d1f004fe9abb226affd1685a2f11a01afe62ff79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/3fa87f4dd982572d7fc2f75bbb3916ebd760d4df",
-                "reference": "3fa87f4dd982572d7fc2f75bbb3916ebd760d4df",
+                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/d1f004fe9abb226affd1685a2f11a01afe62ff79",
+                "reference": "d1f004fe9abb226affd1685a2f11a01afe62ff79",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
                 "dom",
                 "php dom"
             ],
-            "time": "2020-01-07T23:15:50+00:00"
+            "time": "2020-01-10T14:59:03+00:00"
         },
         {
             "name": "websharks/css-minifier",
