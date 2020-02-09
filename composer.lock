@@ -1406,22 +1406,22 @@
         },
         {
             "name": "voku/html-min",
-            "version": "3.1.8",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/HtmlMin.git",
-                "reference": "62a1f2af5e317b2f118bf2d63194e8462db38af2"
+                "reference": "f73514a9c9dfcef6d1b24043c1dcb6142c8e8cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/HtmlMin/zipball/62a1f2af5e317b2f118bf2d63194e8462db38af2",
-                "reference": "62a1f2af5e317b2f118bf2d63194e8462db38af2",
+                "url": "https://api.github.com/repos/voku/HtmlMin/zipball/f73514a9c9dfcef6d1b24043c1dcb6142c8e8cc3",
+                "reference": "f73514a9c9dfcef6d1b24043c1dcb6142c8e8cc3",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "php": ">=7.0.0",
-                "voku/simple_html_dom": "~4.5"
+                "voku/simple_html_dom": "~4.7.7"
             },
             "require-dev": {
                 "phpunit/phpunit": "~6.0 || ~7.0"
@@ -1451,7 +1451,7 @@
                 "html",
                 "minifier"
             ],
-            "time": "2019-06-19T11:19:09+00:00"
+            "time": "2020-02-06T23:10:13+00:00"
         },
         {
             "name": "voku/simple_html_dom",
@@ -1661,23 +1661,23 @@
         },
         {
             "name": "wyrihaximus/html-compress",
-            "version": "2.0.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/HtmlCompress.git",
-                "reference": "d1d2f1b830a9d291ea322b0bed9e0e9547a39a73"
+                "reference": "70c4f469d42ebb2695dbbc80cdfd4b6abcebdac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/d1d2f1b830a9d291ea322b0bed9e0e9547a39a73",
-                "reference": "d1d2f1b830a9d291ea322b0bed9e0e9547a39a73",
+                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/70c4f469d42ebb2695dbbc80cdfd4b6abcebdac6",
+                "reference": "70c4f469d42ebb2695dbbc80cdfd4b6abcebdac6",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2",
-                "voku/html-min": "^3.1.8",
+                "voku/html-min": "^4.0.7",
                 "wyrihaximus/compress": "^1.1",
-                "wyrihaximus/css-compress": "^1.0",
+                "wyrihaximus/css-compress": "^1.0.1",
                 "wyrihaximus/js-compress": "^1.0"
             },
             "require-dev": {
@@ -1705,7 +1705,7 @@
                 "compress",
                 "html"
             ],
-            "time": "2019-09-08T20:30:26+00:00"
+            "time": "2020-02-08T22:52:23+00:00"
         },
         {
             "name": "wyrihaximus/js-compress",
