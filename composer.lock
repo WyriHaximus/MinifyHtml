@@ -149,16 +149,16 @@
         },
         {
             "name": "cakephp/chronos",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/chronos.git",
-                "reference": "e1044d27cabf12d19097b436001aa96a3c2e4b0a"
+                "reference": "0b176c8e8abb18b552b789f60250188a74d534ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/e1044d27cabf12d19097b436001aa96a3c2e4b0a",
-                "reference": "e1044d27cabf12d19097b436001aa96a3c2e4b0a",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/0b176c8e8abb18b552b789f60250188a74d534ab",
+                "reference": "0b176c8e8abb18b552b789f60250188a74d534ab",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +200,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2020-02-08T02:38:43+00:00"
+            "time": "2020-02-26T20:24:12+00:00"
         },
         {
             "name": "composer/ca-bundle",
