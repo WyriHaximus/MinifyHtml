@@ -19,5 +19,7 @@ use Cake\Core\Configure;
 function compress(string $content): string
 {
     $factory = call_user_func(Configure::read('WyriHaximus.MinifyHtml.factory'));
-    return $factory->compress($content);
+
+    //The error `Function libxml_disable_entity_loader() is deprecated` is suppressed
+    return @$factory->compress($content);
 }
