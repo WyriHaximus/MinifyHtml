@@ -1,0 +1,65 @@
+name: Main
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  supported-versions-matrix:
+    name: Supported Versions Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.supported-versions-matrix.outputs.version }}
+    steps:
+      - uses: actions/checkout@v1
+      - id: supported-versions-matrix
+        uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+  qa:
+    runs-on: ubuntu-18.04
+    needs:
+      - supported-versions-matrix
+    strategy:
+      fail-fast: false
+      matrix:
+        dependencies: ["lowest", "current", "highest"]
+        php-versions:  ${{ fromJson(needs.supported-versions-matrix.outputs.version) }}
+    name: PHP ${{ matrix.php-versions }} Test with ${{ matrix.dependencies }} dependencies on ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, intl
+          coverage: pcov
+          tools: cs2pr
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php-versions }}
+
+      - name: Use lowest dependencies
+        if: ${{ matrix.dependencies == 'lowest' }}
+        run: composer update --prefer-lowest --no-progress
+
+      - name: Install locked dependencies
+        if: ${{ matrix.dependencies == 'current' }}
+        run: composer install --no-progress
+
+      - name: Use highest dependencies
+        if: ${{ matrix.dependencies == 'highest'}}
+        run: composer update --no-progress
+
+      - run: make travis
+      - run: make travis-coverage
