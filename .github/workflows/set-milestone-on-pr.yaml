@@ -46,13 +46,6 @@ jobs:
             exit 0
           fi
 
-          composer install --no-progress --ansi --no-interaction --prefer-dist -o -q
-
-          if ! (./vendor/bin/roave-backward-compatibility-check); then
-            printf "::set-output name=version::%s" "${MAJOR}"
-            exit 0
-          fi
-
           printf "::set-output name=version::%s" "${MINOR}"
         env:
           PREVIOUS_TAG: ${{ steps.previoustag.outputs.tag }}
