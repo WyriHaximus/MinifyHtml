@@ -1,7 +1,7 @@
 MinifyHtml
 ==========
 
-CakePHP 4, HTML Minify Plugin
+CakePHP 5, HTML Minify Plugin
 
 ### Installation ###
 
